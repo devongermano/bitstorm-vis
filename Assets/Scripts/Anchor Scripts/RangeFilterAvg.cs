@@ -14,7 +14,7 @@ public class RangeFilterAvg : MonoBehaviour {
 		lastPacket = packet;
 		samples.Enqueue (packet.distance);
 		if (samples.Count >= SampleSize) {
-			float junk = samples.Dequeue();
+			samples.Dequeue();
 			float accum = 0;
 			float[] samplesArray = samples.ToArray();
 			for (int i=0;i<samplesArray.Length;i++) {

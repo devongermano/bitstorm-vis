@@ -17,6 +17,8 @@ public class AnchorScript : MonoBehaviour {
 	public float RangeOffset = 0.0f;
 	public GameObject RangeText;
 
+    public GameObject ProximityPrefab;
+
 	public int sampleSize = 5;
 
 	[HideInInspector]
@@ -24,8 +26,7 @@ public class AnchorScript : MonoBehaviour {
 
 	private Queue<float> samples = new Queue<float>();
 
-
-	private AnchorInfoPacket lastPacket;
+    private AnchorInfoPacket lastPacket;
 
     //Experimentally the natural log function was found to provide the best representation of the
     //tag's actual position.
@@ -34,6 +35,9 @@ public class AnchorScript : MonoBehaviour {
     public void Update() {
 		RangeText.SetActive (DisplayRange);
 	}
+
+
+
 
     /**
      * To generate a weighted average a function is applied over the range [1,n]. Each of

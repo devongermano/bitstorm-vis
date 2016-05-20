@@ -19,7 +19,7 @@ public class CPTagPositioner : MonoBehaviour {
     //Lerping values
     Vector3 lerpingFrom;
     Vector3 lerpingTo;
-    float startLerping;
+    //float startLerping;
     float currentLerpTime;
     float lerpTime = 0.04f;
     bool stillLerping = false;
@@ -69,7 +69,7 @@ public class CPTagPositioner : MonoBehaviour {
         if(!stillLerping) {
             lerpingFrom = transform.position;
             lerpingTo = moveToPositions.Dequeue();
-            startLerping = Time.time;
+            //startLerping = Time.time;
             currentLerpTime = 0.0f;
             stillLerping = true;
         }

@@ -618,8 +618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc49634e206149c185c4413f9aa8386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IP: 192.168.99.100
-  Port: 8080
+  IP: 172.99.77.57
+  Port: 1338
   Timeout: 5000
 --- !u!1 &609065411
 GameObject:
